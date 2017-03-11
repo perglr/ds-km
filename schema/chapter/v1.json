@@ -25,6 +25,10 @@
             "answerid": {
                 "type": "integer",
                 "minimum": 0
+            },
+            "uid": {
+                "type": "string",
+                "pattern": "^[a-zA-Z]{5}$"
             }
         },
         "questionpointer": {
@@ -114,6 +118,7 @@
             "optionanswer": {
                 "type": "object",
                 "properties": {
+                    "uid": { "$ref" : "#/common/ids/uid" },
                     "id": { "$ref" : "#/common/ids/answerid" },
                     "label": { "type": "string" },
                     "advice": { "type": "string" }
@@ -131,6 +136,7 @@
             "question": {
                 "type": "object",
                 "properties": {
+                    "uid": { "$ref" : "#/common/ids/uid" },
                     "questionid": { "$ref": "#/common/ids/questionid" },
                     "title": { "type": "string" },
                     "text": { "type": "string" },

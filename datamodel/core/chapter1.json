@@ -4,287 +4,631 @@
     "formatversion": 1,
     "title": "Design of experiment",
     "text": "Before you decide to embark on any new study, it is nowadays good practice to consider all options to keep the data generation part of your study as limited as possible. It is not because we can generate massive amounts of data that we always need to do so. Creating data with public money is bringing with it the responsibility to treat those data well and (if potentially useful) make them available for re-use by others.",
-    "questions" :
-    [
-	{
-	    "questionid": 1, "type": "option",
-	    "title": "Is there any pre-existing data?",
-	    "text": "Are there any data sets available in the world that are relevant to your planned research?",
-	    "answers": 
-	    [ 
-		{
-		    "id": 0, "label": "No", 
-		    "advice": "You know that this is very unlikely? This question is not only about data sets that are similar to what you want to determine yourself, but also reference data or data that should be mined from the existing literature. Further, it is very likely that you will refer to related data, e.g. other databases where you usually \"quickly look something up\", but that could maybe be properly integrated, especially if you need to do such lookups multiple times."
-		},
-		{   "id": 1, "label": "Yes"}
-	    ],
-	    "references": [{"type": "dmpbook", "chapter": "1.1"}]
-	},
-	{
-	    "questionid": 2, "type": "option",
-	    "precondition": { "questionid": 1, "answerid": 1 },
-	    "title": "Will you be using any pre-existing data (including other people's data)?",
-	    "text": "Will you be referring to any earlier measured data, reference data, or data that should be mined from existing literature? Your own data as well as data from others?",
-	    "answers": 
-	    [
-		{   "id": 0, "label": "No",
-		    "advice": "Did you research all the data that exists? You may not be aware of all existing data that could be available. Although using and/or integrating existing data sets may pose a challenge, it will normally be cheaper than collecting everything yourself. Even if you decide not to use an existing data set, it is better to do this as a conscious decision." },
-		{   "id": 1, "label": "Yes" }
-	    ],
-	    "references": [{"type": "dmpbook", "chapter": "1.2"}]
-	},
-	{
-	    "questionid": 3, "type": "list",
-	    "precondition": { "questionid": 2, "answerid": 1 },
-	    "title": "What reference data will you use?",
-	    "text": "Much of todays data is used in comparison with reference data. A genome for instance is compared with a reference genome to identify genomic variants. If you use reference data, there are several other issues that you should consider. What are the reference data sets that you will use?",
-	    "references": [{"type": "dmpbook", "chapter": "1.3"}]
-	},
-	{
-	    "questionid": 4, "type": "option",
-	    "precondition": { "questionid": 3 },
-	    "title": "Do you know where and how is it available?",
-	    "text": "Do you know where the reference data is available, what the conditions for use are, and how to reference it?",
-	    "answers": 
-	    [
-		{    "id": 0, "label": "No", "advice": "Figure this out quickly!" },
-		{    "id": 1, "label": "Yes" } 
-	    ],
-	    "references": [{"type": "dmpbook", "chapter": "1.4"}]
-	},
-	{
-	    "questionid": 5, "type": "option",
-	    "precondition": { "questionid": 3 },
-	    "title": "Do you knpw in what format the reference data is available?",
-	    "text": "Do you know the data format of the reference data? Is this suitable for your work? Does it need to be converted?",
-	    "answers": 
-	    [
-		{    "id": 0, "label": "I can directly use it" },
-		{    "id": 1, "label": "I need to convert it before using" } 
-	    ],
-	    "references": [{"type": "dmpbook", "chapter": "1.5"}]
-	},
-	{
-	    "questionid": 6, "type": "option",
-	    "precondition": { "questionid": 3 },
-	    "title": "Is the reference data resource versioned?",
-	    "text": "Many reference data sets evolve over time. If the reference data set changes, this may affect your results. If different versions of a reference data set exist, you need to establish your \"version policy\".",
-	    "answers": 
-	    [
-		{    "id": 0, "label": "No" },
-		{    "id": 1, "label": "Yes" }
-	    ],
-	    "references": [{"type": "dmpbook", "chapter": "1.6"}]
-	},
-	{
-	    "questionid": 7, "type": "text",
-	    "precondition": { "questionid": 6, "answerid": 1 },
-	    "title": "Which version will you use?",
-	    "text": "If there are different versions available, you have to decide with all project partners together which version you will be using. Probably you will go for the latest release as of the date of the start of your research project. However, if you have other data from older projects that need to be merged, you may need to consider using the same release you used for a previous project."
-	},
- 	{
-	    "questionid": 8, "type": "option",
-	    "precondition": { "questionid": 6, "answerid": 1 },
-	    "title": "Will you change version if it updates?",
-	    "text": "If the reference changes while you are working on your research project, you need to decide whether you will follow these changes. Most likely that will mean that you have to do some analyses again, so you will need to make sure enough resources are available to do so. You can decide to stay with the version that you started with; this can have the disadvantage that you will not benefit from added information or added consistency.",
-	    "answers": 
-	    [
-		{    "id": 0, "label": "Will stay with the old version" },
-		{    "id": 1, "label": "New analyses will be done with the new version" },
-		{    "id": 2, "label": "All analyses will be redone with the new version" }
-	    ]
-	},
- 	{
-	    "questionid": 79, "type": "option",
-	    "precondition": { "questionid": 8, "answerid": 0},
-	    "title": "How will the old version be available?",
-	    "text": "Since you want to keep using the old version of the reference data, how will it be available to you?",
-	    "answers": 
-	    [
-		{    "id": 0, "label": "I will need it only at the beginning" },
-		{    "id": 1, "label": "I will use a downloaded version" },
-		{    "id": 2, "label": "The provider keeps old versions around" }
-	    ]
-	},
- 	{
-	    "questionid": 80, "type": "option",
-	    "precondition": { "questionid": 3},
-	    "title": "How will you make sure the same reference data will be available to reproduce your results?",
-	    "text": "Will the reference data in the version you use be available to others?",
-	    "answers": 
-	    [
-		{    "id": 0, "label": "I will keep a copy and make it available with my results" },
-		{    "id": 1, "label": "The provider keeps old versions around" }
-	    ]
-	},
-	{
-	    "questionid": 9, "type": "list",
-	    "precondition": { "questionid": 2, "answerid": 1 },
-	    "title": "What existing non-reference data sets will you use?",
-	    "text": "Even if you will be producing your own data, you often will also be relying on existing data sets (e.g. from earlier . You may need to integrate your new data with an existing data set or retrieve additional information from related data bases. Will you be doing such things?",
-	    "references": [{"type": "dmpbook", "chapter": "1.7"}]
-	},
-	{
-	    "questionid": 11, "type": "option",
-	    "precondition": { "questionid": 9 },
-	    "title": "Will the owners of this data set work with you on this study",
-	    "answers":
-	    [
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" },
-		{   "id": 2, "label": "We are the owners" }
-	    ],
-	    "references": [{"type": "dmpbook", "chapter": "1.8"}]
-	},
-	{
-	    "questionid": 10, "type": "option",
-	    "precondition": { "questionid": 11, "answerid": 0 },
-	    "title": "Do you need to request access to the data",
-	    "answers":
-	    [
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" }
-	    ]
-	},
-	{
-	    "questionid": 13, "type": "option",
-	    "precondition": { "questionid": 9 },
-	    "title": "Will any usage restrictions affect your reuse?",
-	    "answers":
-	    [
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" }
-	    ]
-	},
-	{
-	    "questionid": 12, "type": "option",
-	    "precondition": { "questionid": 9 },
-	    "title": "Is extension of any consent for privacy sensitive data needed?",
-	    "text": "If the data that you will re-use is coupled to people, is the informed consent that was originally obtained from those people covering your current research?",
-	    "answers":
-	    [
-		{   "id": 0, "label": "Not applicable" },
-		{   "id": 1, "label": "Existing consent applies" },
-		{   "id": 2, "label": "New consent needed" }
-	    ],
-	    "references": [{"type": "dmpbook", "chapter": "1.9"}]
-	},
-	{
-	    "questionid": 14, "type": "option",
-	    "precondition": { "questionid": 9 },
-	    "title": "How will you be accessing the data?",
-	    "answers":
-	    [
-		{   "id": 0, "label": "Already have physical copy" },
-		{   "id": 1, "label": "Will make physical copy" },
-		{   "id": 2, "label": "Will use it online" }
-	    ]
-	},
-	{
-	    "questionid": 15, "type": "option",
-	    "precondition": { "questionid": 9 },
-	    "title": "Do you knpw in what format the data is available?",
-	    "text": "Do you know the data format of the data? Is this suitable for your work? Does it need to be converted?",
-	    "answers": 
-	    [
-		{    "id": 0, "label": "I can directly use it" },
-		{    "id": 1, "label": "I need to convert it before using" } 
-	    ]
-	},
-	{
-	    "questionid": 17, "type": "option",
-	    "precondition": { "questionid": 9 },
-	    "title": "Is the data set fixed, or will it be updated in the future?",
-	    "text": "Is the data set you will reuse a fixed data set (with a persistent identifier), or is it a data set that is being worked on (by others) and may be updated during your project or after?",
-	    "answers": 
-	    [
-		{    "id": 0, "label": "It is a fixed data set, this will not influence reproducibility of my results" },
-		{    "id": 1, "label": "It may change, I will make sure a copy of the version I used will be available with my results" } 
-	    ]
-	},
-	{
-	    "questionid": 18, "type": "option",
-	    "precondition": { "questionid": 9 },
-	    "title": "Can you and will you use the complete existing data set?",
-	    "text": "If you use any filtering, how will you make sure that your results will be reproducible by yourself and others at a later time?",
-	    "answers": 
-	    [
-		{    "id": 0, "label": "I will use the complete data set" },
-		{    "id": 1, "label": "Any filtering or selection will be well documented" },
-		{    "id": 2, "label": "I will make sure the selected subset will be available together with my results"}
-	    ]
-	},
-	{
-	    "questionid": 16, "type": "option",
-	    "precondition": { "questionid": 2 },
-	    "title": "Do you need to harmonize different sources of existing data?",
-	    "text": "If you are combining data from different sources, harmonization may be required. You may need to re-analyse some original data.",
-	    "answers":
-	    [
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" }
-	    ],
-	    "references": [{"type": "dmpbook", "chapter": "1.10"}]
-	},
-	{
-	    "questionid": 81, "type": "option",
-	    "precondition": { "questionid": 2 },
-	    "title": "Will you be using data that needs to be (re-)made computer readable first?",
-	    "text": "Some old data may need to be recovered, e.g. from tables in scientific papers or may be punch cards.",
-	    "answers":
-	    [
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes, I will make sure to make this data available with my results." }
-	    ]
-	},
-	{
-	    "questionid": 29, "type": "option",
-	    "title": "Will reference data be created?",
-	    "text": "Will any of the data that you will be creating form a reference data set for future research (by others)?",
-	    "answers": 
-	    [
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" }
-	    ],
-	    "references": [{"type": "dmpbook", "chapter": "1.12"}]
-	},
-	{
-	    "questionid": 30, "type": "text",
-	    "precondition": { "questionid": 29, "answerid": 1 },
-	    "title": "What will the Intellectual Property be like?",
-	    "text": "Who will own the rights to the reference data set? Who will be able to use it?"
-	},
-	{
-	    "questionid": 31, "type": "text",
-	    "precondition": { "questionid": 29, "answerid": 1 },
-	    "title": "How will you maintain it?",
-	    "text": "How will maintenance be paid for in the long run? Will you host it yourself or deposit it with a repository? How will you deal with requests for help? And with requests for adding data?"
-	},
-	{
-	    "questionid": 32, "type": "text",
-	    "precondition": { "questionid": 29, "answerid": 1 },
-	    "title": "How will the release schedule be?",
-	    "text": "Will you be updating the reference data at regular intervals?"
-	},
-	{
-	    "questionid": 33, "type": "option",
-	    "title": "Will you be storing samples?",
-	    "answers": 
-	    [
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" }
-	    ],
-	    "references": [{"type": "dmpbook", "chapter": "1.13"}]
-	},
-	{
-	    "questionid": 38, "type": "option",
-	    "title": "Will you be collecting experimental data?",
-	    "answers": 
-	    [
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" }
-	    ],
-	    "references": [{"type": "dmpbook", "chapter": "1.14"}]
-	}
+    "questions": [
+        {
+            "uid": "qXLCE",
+            "questionid": 1,
+            "type": "option",
+            "title": "Is there any pre-existing data?",
+            "text": "Are there any data sets available in the world that are relevant to your planned research?",
+            "answers": [
+                {
+                    "uid": "McPcj",
+                    "id": 0,
+                    "label": "No",
+                    "advice": "You know that this is very unlikely? This question is not only about data sets that are similar to what you want to determine yourself, but also reference data or data that should be mined from the existing literature. Further, it is very likely that you will refer to related data, e.g. other databases where you usually \"quickly look something up\", but that could maybe be properly integrated, especially if you need to do such lookups multiple times."
+                },
+                {
+                    "uid": "wVfJT",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ],
+            "references": [
+                {
+                    "type": "dmpbook",
+                    "chapter": "1.1"
+                }
+            ]
+        },
+        {
+            "uid": "uCiQj",
+            "questionid": 2,
+            "type": "option",
+            "precondition": {
+                "questionid": 1,
+                "answerid": 1
+            },
+            "title": "Will you be using any pre-existing data (including other people's data)?",
+            "text": "Will you be referring to any earlier measured data, reference data, or data that should be mined from existing literature? Your own data as well as data from others?",
+            "answers": [
+                {
+                    "uid": "CZwPz",
+                    "id": 0,
+                    "label": "No",
+                    "advice": "Did you research all the data that exists? You may not be aware of all existing data that could be available. Although using and/or integrating existing data sets may pose a challenge, it will normally be cheaper than collecting everything yourself. Even if you decide not to use an existing data set, it is better to do this as a conscious decision."
+                },
+                {
+                    "uid": "GqCPL",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ],
+            "references": [
+                {
+                    "type": "dmpbook",
+                    "chapter": "1.2"
+                }
+            ]
+        },
+        {
+            "uid": "UjSad",
+            "questionid": 3,
+            "type": "list",
+            "precondition": {
+                "questionid": 2,
+                "answerid": 1
+            },
+            "title": "What reference data will you use?",
+            "text": "Much of todays data is used in comparison with reference data. A genome for instance is compared with a reference genome to identify genomic variants. If you use reference data, there are several other issues that you should consider. What are the reference data sets that you will use?",
+            "references": [
+                {
+                    "type": "dmpbook",
+                    "chapter": "1.3"
+                }
+            ]
+        },
+        {
+            "uid": "ZseaD",
+            "questionid": 4,
+            "type": "option",
+            "precondition": {
+                "questionid": 3
+            },
+            "title": "Do you know where and how is it available?",
+            "text": "Do you know where the reference data is available, what the conditions for use are, and how to reference it?",
+            "answers": [
+                {
+                    "uid": "weVgS",
+                    "id": 0,
+                    "label": "No",
+                    "advice": "Figure this out quickly!"
+                },
+                {
+                    "uid": "Dnapg",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ],
+            "references": [
+                {
+                    "type": "dmpbook",
+                    "chapter": "1.4"
+                }
+            ]
+        },
+        {
+            "uid": "aFKQb",
+            "questionid": 5,
+            "type": "option",
+            "precondition": {
+                "questionid": 3
+            },
+            "title": "Do you knpw in what format the reference data is available?",
+            "text": "Do you know the data format of the reference data? Is this suitable for your work? Does it need to be converted?",
+            "answers": [
+                {
+                    "uid": "cfsNB",
+                    "id": 0,
+                    "label": "I can directly use it"
+                },
+                {
+                    "uid": "jqEhA",
+                    "id": 1,
+                    "label": "I need to convert it before using"
+                }
+            ],
+            "references": [
+                {
+                    "type": "dmpbook",
+                    "chapter": "1.5"
+                }
+            ]
+        },
+        {
+            "uid": "bJnMr",
+            "questionid": 6,
+            "type": "option",
+            "precondition": {
+                "questionid": 3
+            },
+            "title": "Is the reference data resource versioned?",
+            "text": "Many reference data sets evolve over time. If the reference data set changes, this may affect your results. If different versions of a reference data set exist, you need to establish your \"version policy\".",
+            "answers": [
+                {
+                    "uid": "KZvdC",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "bzWep",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ],
+            "references": [
+                {
+                    "type": "dmpbook",
+                    "chapter": "1.6"
+                }
+            ]
+        },
+        {
+            "uid": "ZYNbj",
+            "questionid": 7,
+            "type": "text",
+            "precondition": {
+                "questionid": 6,
+                "answerid": 1
+            },
+            "title": "Which version will you use?",
+            "text": "If there are different versions available, you have to decide with all project partners together which version you will be using. Probably you will go for the latest release as of the date of the start of your research project. However, if you have other data from older projects that need to be merged, you may need to consider using the same release you used for a previous project."
+        },
+        {
+            "uid": "haKuR",
+            "questionid": 8,
+            "type": "option",
+            "precondition": {
+                "questionid": 6,
+                "answerid": 1
+            },
+            "title": "Will you change version if it updates?",
+            "text": "If the reference changes while you are working on your research project, you need to decide whether you will follow these changes. Most likely that will mean that you have to do some analyses again, so you will need to make sure enough resources are available to do so. You can decide to stay with the version that you started with; this can have the disadvantage that you will not benefit from added information or added consistency.",
+            "answers": [
+                {
+                    "uid": "Mxptw",
+                    "id": 0,
+                    "label": "Will stay with the old version"
+                },
+                {
+                    "uid": "jBiRk",
+                    "id": 1,
+                    "label": "New analyses will be done with the new version"
+                },
+                {
+                    "uid": "ibKAX",
+                    "id": 2,
+                    "label": "All analyses will be redone with the new version"
+                }
+            ]
+        },
+        {
+            "uid": "mQLEN",
+            "questionid": 79,
+            "type": "option",
+            "precondition": {
+                "questionid": 8,
+                "answerid": 0
+            },
+            "title": "How will the old version be available?",
+            "text": "Since you want to keep using the old version of the reference data, how will it be available to you?",
+            "answers": [
+                {
+                    "uid": "JmdFA",
+                    "id": 0,
+                    "label": "I will need it only at the beginning"
+                },
+                {
+                    "uid": "empfd",
+                    "id": 1,
+                    "label": "I will use a downloaded version"
+                },
+                {
+                    "uid": "KHDbE",
+                    "id": 2,
+                    "label": "The provider keeps old versions around"
+                }
+            ]
+        },
+        {
+            "uid": "vVAVN",
+            "questionid": 80,
+            "type": "option",
+            "precondition": {
+                "questionid": 3
+            },
+            "title": "How will you make sure the same reference data will be available to reproduce your results?",
+            "text": "Will the reference data in the version you use be available to others?",
+            "answers": [
+                {
+                    "uid": "MDLnJ",
+                    "id": 0,
+                    "label": "I will keep a copy and make it available with my results"
+                },
+                {
+                    "uid": "vzWKQ",
+                    "id": 1,
+                    "label": "The provider keeps old versions around"
+                }
+            ]
+        },
+        {
+            "uid": "Stifn",
+            "questionid": 9,
+            "type": "list",
+            "precondition": {
+                "questionid": 2,
+                "answerid": 1
+            },
+            "title": "What existing non-reference data sets will you use?",
+            "text": "Even if you will be producing your own data, you often will also be relying on existing data sets (e.g. from earlier . You may need to integrate your new data with an existing data set or retrieve additional information from related data bases. Will you be doing such things?",
+            "references": [
+                {
+                    "type": "dmpbook",
+                    "chapter": "1.7"
+                }
+            ]
+        },
+        {
+            "uid": "PateT",
+            "questionid": 11,
+            "type": "option",
+            "precondition": {
+                "questionid": 9
+            },
+            "title": "Will the owners of this data set work with you on this study",
+            "answers": [
+                {
+                    "uid": "rtuaY",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "rxjTu",
+                    "id": 1,
+                    "label": "Yes"
+                },
+                {
+                    "uid": "WjPRi",
+                    "id": 2,
+                    "label": "We are the owners"
+                }
+            ],
+            "references": [
+                {
+                    "type": "dmpbook",
+                    "chapter": "1.8"
+                }
+            ]
+        },
+        {
+            "uid": "Hhcyi",
+            "questionid": 10,
+            "type": "option",
+            "precondition": {
+                "questionid": 11,
+                "answerid": 0
+            },
+            "title": "Do you need to request access to the data",
+            "answers": [
+                {
+                    "uid": "ZfWhz",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "AxCfC",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ]
+        },
+        {
+            "uid": "Kikct",
+            "questionid": 13,
+            "type": "option",
+            "precondition": {
+                "questionid": 9
+            },
+            "title": "Will any usage restrictions affect your reuse?",
+            "answers": [
+                {
+                    "uid": "LxfCt",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "WQaMZ",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ]
+        },
+        {
+            "uid": "eigKw",
+            "questionid": 12,
+            "type": "option",
+            "precondition": {
+                "questionid": 9
+            },
+            "title": "Is extension of any consent for privacy sensitive data needed?",
+            "text": "If the data that you will re-use is coupled to people, is the informed consent that was originally obtained from those people covering your current research?",
+            "answers": [
+                {
+                    "uid": "AhyHF",
+                    "id": 0,
+                    "label": "Not applicable"
+                },
+                {
+                    "uid": "fBEGx",
+                    "id": 1,
+                    "label": "Existing consent applies"
+                },
+                {
+                    "uid": "NjAve",
+                    "id": 2,
+                    "label": "New consent needed"
+                }
+            ],
+            "references": [
+                {
+                    "type": "dmpbook",
+                    "chapter": "1.9"
+                }
+            ]
+        },
+        {
+            "uid": "Zsusy",
+            "questionid": 14,
+            "type": "option",
+            "precondition": {
+                "questionid": 9
+            },
+            "title": "How will you be accessing the data?",
+            "answers": [
+                {
+                    "uid": "QfHsZ",
+                    "id": 0,
+                    "label": "Already have physical copy"
+                },
+                {
+                    "uid": "WdRrD",
+                    "id": 1,
+                    "label": "Will make physical copy"
+                },
+                {
+                    "uid": "stpTG",
+                    "id": 2,
+                    "label": "Will use it online"
+                }
+            ]
+        },
+        {
+            "uid": "Lsknr",
+            "questionid": 15,
+            "type": "option",
+            "precondition": {
+                "questionid": 9
+            },
+            "title": "Do you knpw in what format the data is available?",
+            "text": "Do you know the data format of the data? Is this suitable for your work? Does it need to be converted?",
+            "answers": [
+                {
+                    "uid": "UciHL",
+                    "id": 0,
+                    "label": "I can directly use it"
+                },
+                {
+                    "uid": "myyMW",
+                    "id": 1,
+                    "label": "I need to convert it before using"
+                }
+            ]
+        },
+        {
+            "uid": "kRpAF",
+            "questionid": 17,
+            "type": "option",
+            "precondition": {
+                "questionid": 9
+            },
+            "title": "Is the data set fixed, or will it be updated in the future?",
+            "text": "Is the data set you will reuse a fixed data set (with a persistent identifier), or is it a data set that is being worked on (by others) and may be updated during your project or after?",
+            "answers": [
+                {
+                    "uid": "fQXcF",
+                    "id": 0,
+                    "label": "It is a fixed data set, this will not influence reproducibility of my results"
+                },
+                {
+                    "uid": "CiBMD",
+                    "id": 1,
+                    "label": "It may change, I will make sure a copy of the version I used will be available with my results"
+                }
+            ]
+        },
+        {
+            "uid": "GJsUh",
+            "questionid": 18,
+            "type": "option",
+            "precondition": {
+                "questionid": 9
+            },
+            "title": "Can you and will you use the complete existing data set?",
+            "text": "If you use any filtering, how will you make sure that your results will be reproducible by yourself and others at a later time?",
+            "answers": [
+                {
+                    "uid": "PSeTy",
+                    "id": 0,
+                    "label": "I will use the complete data set"
+                },
+                {
+                    "uid": "uFJRd",
+                    "id": 1,
+                    "label": "Any filtering or selection will be well documented"
+                },
+                {
+                    "uid": "xLHwe",
+                    "id": 2,
+                    "label": "I will make sure the selected subset will be available together with my results"
+                }
+            ]
+        },
+        {
+            "uid": "rhPcd",
+            "questionid": 16,
+            "type": "option",
+            "precondition": {
+                "questionid": 2
+            },
+            "title": "Do you need to harmonize different sources of existing data?",
+            "text": "If you are combining data from different sources, harmonization may be required. You may need to re-analyse some original data.",
+            "answers": [
+                {
+                    "uid": "qsiCx",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "VpLVB",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ],
+            "references": [
+                {
+                    "type": "dmpbook",
+                    "chapter": "1.10"
+                }
+            ]
+        },
+        {
+            "uid": "HgHjR",
+            "questionid": 81,
+            "type": "option",
+            "precondition": {
+                "questionid": 2
+            },
+            "title": "Will you be using data that needs to be (re-)made computer readable first?",
+            "text": "Some old data may need to be recovered, e.g. from tables in scientific papers or may be punch cards.",
+            "answers": [
+                {
+                    "uid": "uJRhb",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "TERST",
+                    "id": 1,
+                    "label": "Yes, I will make sure to make this data available with my results."
+                }
+            ]
+        },
+        {
+            "uid": "LZzxp",
+            "questionid": 29,
+            "type": "option",
+            "title": "Will reference data be created?",
+            "text": "Will any of the data that you will be creating form a reference data set for future research (by others)?",
+            "answers": [
+                {
+                    "uid": "aBWxt",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "WcYtK",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ],
+            "references": [
+                {
+                    "type": "dmpbook",
+                    "chapter": "1.12"
+                }
+            ]
+        },
+        {
+            "uid": "HeeFC",
+            "questionid": 30,
+            "type": "text",
+            "precondition": {
+                "questionid": 29,
+                "answerid": 1
+            },
+            "title": "What will the Intellectual Property be like?",
+            "text": "Who will own the rights to the reference data set? Who will be able to use it?"
+        },
+        {
+            "uid": "CSnDM",
+            "questionid": 31,
+            "type": "text",
+            "precondition": {
+                "questionid": 29,
+                "answerid": 1
+            },
+            "title": "How will you maintain it?",
+            "text": "How will maintenance be paid for in the long run? Will you host it yourself or deposit it with a repository? How will you deal with requests for help? And with requests for adding data?"
+        },
+        {
+            "uid": "ByTwm",
+            "questionid": 32,
+            "type": "text",
+            "precondition": {
+                "questionid": 29,
+                "answerid": 1
+            },
+            "title": "How will the release schedule be?",
+            "text": "Will you be updating the reference data at regular intervals?"
+        },
+        {
+            "uid": "fiTZE",
+            "questionid": 33,
+            "type": "option",
+            "title": "Will you be storing samples?",
+            "answers": [
+                {
+                    "uid": "vJVjS",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "PBFJD",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ],
+            "references": [
+                {
+                    "type": "dmpbook",
+                    "chapter": "1.13"
+                }
+            ]
+        },
+        {
+            "uid": "kSAgb",
+            "questionid": 38,
+            "type": "option",
+            "title": "Will you be collecting experimental data?",
+            "answers": [
+                {
+                    "uid": "Ntfcb",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "npkgC",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ],
+            "references": [
+                {
+                    "type": "dmpbook",
+                    "chapter": "1.14"
+                }
+            ]
+        }
     ]
 }

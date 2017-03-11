@@ -3,61 +3,115 @@
     "namespace": "core",
     "formatversion": 1,
     "title": "Information and insight",
-    "questions" :
-    [
-	{
-	    "questionid": 1, "type": "option",
-	    "title": "Will you be working with the philosophy 'as open as possible' for your data?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "No", "advice": "You will need to explain!" },
-		{   "id": 1, "label": "Yes"}
-	    ]
-	},
-	{
-	    "questionid": 2, "type": "option",
-	    "title": " Are there legal reasons why (some of your) data can not be completely open?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" }
-	    ]
-	},
-	{
-	    "questionid": 3, "type": "option",
-	    "title": " Are there business reasons why (some of your) data can not be completely open?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes"}
-	    ]
-	},
-	{
-	    "questionid": 4, "type": "option",
-	    "title": "Where will you make your data available?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "Skip" },
-		{   "id": 1, "label": "Drill Deeper"}
-	    ]
-	},
-	{
-	    "questionid": 5, "type": "option",
-	    "title": "Did you work out the financial aspects of making the data available?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "Skip" },
-		{   "id": 1, "label": "Drill Deeper"}
-	    ]
-	},
-	{
-	    "questionid": 6, "type": "option",
-	    "title": "Will you be archiving data?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" }
-	    ]
-	}
+    "questions": [
+        {
+            "uid": "KzKnB",
+            "questionid": 1,
+            "type": "option",
+            "title": "Will you be working with the philosophy 'as open as possible' for your data?",
+            "answers": [
+                {
+                    "uid": "rTsgN",
+                    "id": 0,
+                    "label": "No",
+                    "advice": "You will need to explain!"
+                },
+                {
+                    "uid": "uDHPX",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ]
+        },
+        {
+            "uid": "UcmPN",
+            "questionid": 2,
+            "type": "option",
+            "title": " Are there legal reasons why (some of your) data can not be completely open?",
+            "answers": [
+                {
+                    "uid": "JaQXu",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "AxfiL",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ]
+        },
+        {
+            "uid": "KhhwS",
+            "questionid": 3,
+            "type": "option",
+            "title": " Are there business reasons why (some of your) data can not be completely open?",
+            "answers": [
+                {
+                    "uid": "CvTGE",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "bxfaN",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ]
+        },
+        {
+            "uid": "gMLZd",
+            "questionid": 4,
+            "type": "option",
+            "title": "Where will you make your data available?",
+            "answers": [
+                {
+                    "uid": "RKyqr",
+                    "id": 0,
+                    "label": "Skip"
+                },
+                {
+                    "uid": "TgSvh",
+                    "id": 1,
+                    "label": "Drill Deeper"
+                }
+            ]
+        },
+        {
+            "uid": "JXWnU",
+            "questionid": 5,
+            "type": "option",
+            "title": "Did you work out the financial aspects of making the data available?",
+            "answers": [
+                {
+                    "uid": "nDeHW",
+                    "id": 0,
+                    "label": "Skip"
+                },
+                {
+                    "uid": "BuyxK",
+                    "id": 1,
+                    "label": "Drill Deeper"
+                }
+            ]
+        },
+        {
+            "uid": "RwJHg",
+            "questionid": 6,
+            "type": "option",
+            "title": "Will you be archiving data?",
+            "answers": [
+                {
+                    "uid": "aGWPs",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "jJmyj",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ]
+        }
     ]
-}	
+}

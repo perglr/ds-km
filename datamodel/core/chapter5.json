@@ -3,52 +3,97 @@
     "namespace": "core",
     "formatversion": 1,
     "title": "Data integration",
-    "questions" :
-    [
-	{
-	    "questionid": 1, "type": "option",
-	    "title": "What is the framework you will use for data integration?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "Taken care of" },
-		{   "id": 1, "label": "Drill deeper" }
-	    ]
-	},
-	{
-	    "questionid": 2, "type": "option",
-	    "title": "Will you be using common or exchangeable units?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" }
-	    ]
-	},
-	{
-	    "questionid": 3, "type": "option",
-	    "title": "Will you be using common ontologies?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes", "advice": "Choose the ontologies before you start" }
-	    ]
-	},
-	{
-	    "questionid": 4, "type": "option",
-	    "title": "Will there be potential issues with statistical normalization?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" }
-	    ]
-	},
-	{
-	    "questionid": 5, "type": "option",
-	    "title": "Do you have all tools to couple the necessary data types?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" }
-	    ]
-	}
+    "questions": [
+        {
+            "uid": "AFmAQ",
+            "questionid": 1,
+            "type": "option",
+            "title": "What is the framework you will use for data integration?",
+            "answers": [
+                {
+                    "uid": "jrvrF",
+                    "id": 0,
+                    "label": "Taken care of"
+                },
+                {
+                    "uid": "zWAdd",
+                    "id": 1,
+                    "label": "Drill deeper"
+                }
+            ]
+        },
+        {
+            "uid": "VUpRf",
+            "questionid": 2,
+            "type": "option",
+            "title": "Will you be using common or exchangeable units?",
+            "answers": [
+                {
+                    "uid": "kBTda",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "bjBGN",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ]
+        },
+        {
+            "uid": "MMkmg",
+            "questionid": 3,
+            "type": "option",
+            "title": "Will you be using common ontologies?",
+            "answers": [
+                {
+                    "uid": "dRpDN",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "eTnqi",
+                    "id": 1,
+                    "label": "Yes",
+                    "advice": "Choose the ontologies before you start"
+                }
+            ]
+        },
+        {
+            "uid": "qpNdi",
+            "questionid": 4,
+            "type": "option",
+            "title": "Will there be potential issues with statistical normalization?",
+            "answers": [
+                {
+                    "uid": "ucKkh",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "UFaBv",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ]
+        },
+        {
+            "uid": "DPfLQ",
+            "questionid": 5,
+            "type": "option",
+            "title": "Do you have all tools to couple the necessary data types?",
+            "answers": [
+                {
+                    "uid": "uxHre",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "YCzvJ",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ]
+        }
     ]
 }

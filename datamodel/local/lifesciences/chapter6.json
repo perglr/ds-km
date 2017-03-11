@@ -2,26 +2,42 @@
     "chapterid": 6,
     "namespace": "lifesciences",
     "formatversion": 1,
-    "questions" :
-    [
-	{
-	    "questionid": 1, "type": "option",
-	    "title": "Will you do systems biology modeling?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" }
-	    ]
-	},
-	{
-	    "questionid": 2, "type": "option",
-	    "title": "Will you do structural modeling?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "No" },
-		{   "id": 1, "label": "Yes" }
-	    ]
-	}
+    "questions": [
+        {
+            "uid": "DAaEj",
+            "questionid": 1,
+            "type": "option",
+            "title": "Will you do systems biology modeling?",
+            "answers": [
+                {
+                    "uid": "MLpbh",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "pZiuM",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ]
+        },
+        {
+            "uid": "SgPyR",
+            "questionid": 2,
+            "type": "option",
+            "title": "Will you do structural modeling?",
+            "answers": [
+                {
+                    "uid": "Scxxt",
+                    "id": 0,
+                    "label": "No"
+                },
+                {
+                    "uid": "YzSzq",
+                    "id": 1,
+                    "label": "Yes"
+                }
+            ]
+        }
     ]
 }
-

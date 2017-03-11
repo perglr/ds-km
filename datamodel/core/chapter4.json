@@ -3,46 +3,80 @@
     "namespace": "core",
     "formatversion": 1,
     "title": "Data processing and curation",
-    "questions" :
-    [
-	{
-	    "questionid": 1, "type": "option",
-	    "title": "Workflow development",
-	    "text": "It is likely that you will be developing or modifying the workflow for data processing. There are a lot of aspects of this workflow that can play a role in your data management, such as the use of an existing work flow engine, the use of existing software vs development of new components, and whether every run needs human intervention or whether all data processing can be run in bulk once the work flow has been defined.",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "Taken care of" },
-		{   "id": 1, "label": "Drill deeper" }
-	    ]
-	},
-	{
-	    "questionid": 2, "type": "option",
-	    "title": "How will you make sure to know what exactly has been run?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "Taken care of" },
-		{   "id": 1, "label": "Drill deeper" }
-	    ]
-	},
-	{
-	    "questionid": 3, "type": "option",
-	    "title": "How will you validate the integrity of the results?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "Taken care of" },
-		{   "id": 1, "label": "Drill deeper" }
-	    ]
-	},
-	{
-	    "questionid": 4, "type": "option",
-	    "title": "Do you have a contingency plan?",
-	    "text": "What will you do if the compute facility is down?",
-	    "answers": 
-	    [ 
-		{   "id": 0, "label": "Wait" },
-		{   "id": 1, "label": "We have an alternative" }
-	    ]
-	}
+    "questions": [
+        {
+            "uid": "XrDzW",
+            "questionid": 1,
+            "type": "option",
+            "title": "Workflow development",
+            "text": "It is likely that you will be developing or modifying the workflow for data processing. There are a lot of aspects of this workflow that can play a role in your data management, such as the use of an existing work flow engine, the use of existing software vs development of new components, and whether every run needs human intervention or whether all data processing can be run in bulk once the work flow has been defined.",
+            "answers": [
+                {
+                    "uid": "SRpCJ",
+                    "id": 0,
+                    "label": "Taken care of"
+                },
+                {
+                    "uid": "ZDHmZ",
+                    "id": 1,
+                    "label": "Drill deeper"
+                }
+            ]
+        },
+        {
+            "uid": "xsXJC",
+            "questionid": 2,
+            "type": "option",
+            "title": "How will you make sure to know what exactly has been run?",
+            "answers": [
+                {
+                    "uid": "SfDaj",
+                    "id": 0,
+                    "label": "Taken care of"
+                },
+                {
+                    "uid": "RvGUR",
+                    "id": 1,
+                    "label": "Drill deeper"
+                }
+            ]
+        },
+        {
+            "uid": "iEJVQ",
+            "questionid": 3,
+            "type": "option",
+            "title": "How will you validate the integrity of the results?",
+            "answers": [
+                {
+                    "uid": "cnVKU",
+                    "id": 0,
+                    "label": "Taken care of"
+                },
+                {
+                    "uid": "vSbwA",
+                    "id": 1,
+                    "label": "Drill deeper"
+                }
+            ]
+        },
+        {
+            "uid": "CaPKG",
+            "questionid": 4,
+            "type": "option",
+            "title": "Do you have a contingency plan?",
+            "text": "What will you do if the compute facility is down?",
+            "answers": [
+                {
+                    "uid": "KGkAP",
+                    "id": 0,
+                    "label": "Wait"
+                },
+                {
+                    "uid": "LDwUa",
+                    "id": 1,
+                    "label": "We have an alternative"
+                }
+            ]
+        }
     ]
 }
-
