@@ -1,117 +1,99 @@
 {
-    "chapterid": 7,
-    "namespace": "core",
-    "formatversion": 1,
-    "title": "Information and insight",
     "questions": [
         {
-            "uid": "KzKnB",
-            "questionid": 1,
-            "type": "option",
             "title": "Will you be working with the philosophy 'as open as possible' for your data?",
+            "type": "option",
             "answers": [
                 {
+                    "advice": "You will need to explain!",
                     "uid": "rTsgN",
-                    "id": 0,
-                    "label": "No",
-                    "advice": "You will need to explain!"
+                    "label": "No"
                 },
                 {
                     "uid": "uDHPX",
-                    "id": 1,
                     "label": "Yes"
                 }
-            ]
+            ],
+            "uid": "KzKnB"
         },
         {
-            "uid": "UcmPN",
-            "questionid": 2,
-            "type": "option",
             "title": " Are there legal reasons why (some of your) data can not be completely open?",
+            "type": "option",
             "answers": [
                 {
                     "uid": "JaQXu",
-                    "id": 0,
                     "label": "No"
                 },
                 {
                     "uid": "AxfiL",
-                    "id": 1,
                     "label": "Yes"
                 }
-            ]
+            ],
+            "uid": "UcmPN"
         },
         {
-            "uid": "KhhwS",
-            "questionid": 3,
-            "type": "option",
             "title": " Are there business reasons why (some of your) data can not be completely open?",
+            "type": "option",
             "answers": [
                 {
                     "uid": "CvTGE",
-                    "id": 0,
                     "label": "No"
                 },
                 {
                     "uid": "bxfaN",
-                    "id": 1,
                     "label": "Yes"
                 }
-            ]
+            ],
+            "uid": "KhhwS"
         },
         {
-            "uid": "gMLZd",
-            "questionid": 4,
-            "type": "option",
             "title": "Where will you make your data available?",
+            "type": "option",
             "answers": [
                 {
                     "uid": "RKyqr",
-                    "id": 0,
                     "label": "Skip"
                 },
                 {
                     "uid": "TgSvh",
-                    "id": 1,
                     "label": "Drill Deeper"
                 }
-            ]
+            ],
+            "uid": "gMLZd"
         },
         {
-            "uid": "JXWnU",
-            "questionid": 5,
-            "type": "option",
             "title": "Did you work out the financial aspects of making the data available?",
+            "type": "option",
             "answers": [
                 {
                     "uid": "nDeHW",
-                    "id": 0,
                     "label": "Skip"
                 },
                 {
                     "uid": "BuyxK",
-                    "id": 1,
                     "label": "Drill Deeper"
                 }
-            ]
+            ],
+            "uid": "JXWnU"
         },
         {
-            "uid": "RwJHg",
-            "questionid": 6,
-            "type": "option",
             "title": "Will you be archiving data?",
+            "type": "option",
             "answers": [
                 {
                     "uid": "aGWPs",
-                    "id": 0,
                     "label": "No"
                 },
                 {
                     "uid": "jJmyj",
-                    "id": 1,
                     "label": "Yes"
                 }
-            ]
+            ],
+            "uid": "RwJHg"
         }
-    ]
+    ],
+    "title": "Information and insight",
+    "namespace": "core",
+    "formatversion": 1,
+    "chapterid": 7
 }

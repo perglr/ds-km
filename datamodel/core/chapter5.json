@@ -1,99 +1,84 @@
 {
-    "chapterid": 5,
-    "namespace": "core",
-    "formatversion": 1,
-    "title": "Data integration",
     "questions": [
         {
-            "uid": "AFmAQ",
-            "questionid": 1,
-            "type": "option",
             "title": "What is the framework you will use for data integration?",
+            "type": "option",
             "answers": [
                 {
                     "uid": "jrvrF",
-                    "id": 0,
                     "label": "Taken care of"
                 },
                 {
                     "uid": "zWAdd",
-                    "id": 1,
                     "label": "Drill deeper"
                 }
-            ]
+            ],
+            "uid": "AFmAQ"
         },
         {
-            "uid": "VUpRf",
-            "questionid": 2,
-            "type": "option",
             "title": "Will you be using common or exchangeable units?",
+            "type": "option",
             "answers": [
                 {
                     "uid": "kBTda",
-                    "id": 0,
                     "label": "No"
                 },
                 {
                     "uid": "bjBGN",
-                    "id": 1,
                     "label": "Yes"
                 }
-            ]
+            ],
+            "uid": "VUpRf"
         },
         {
-            "uid": "MMkmg",
-            "questionid": 3,
-            "type": "option",
             "title": "Will you be using common ontologies?",
+            "type": "option",
             "answers": [
                 {
                     "uid": "dRpDN",
-                    "id": 0,
                     "label": "No"
                 },
                 {
+                    "advice": "Choose the ontologies before you start",
                     "uid": "eTnqi",
-                    "id": 1,
-                    "label": "Yes",
-                    "advice": "Choose the ontologies before you start"
+                    "label": "Yes"
                 }
-            ]
+            ],
+            "uid": "MMkmg"
         },
         {
-            "uid": "qpNdi",
-            "questionid": 4,
-            "type": "option",
             "title": "Will there be potential issues with statistical normalization?",
+            "type": "option",
             "answers": [
                 {
                     "uid": "ucKkh",
-                    "id": 0,
                     "label": "No"
                 },
                 {
                     "uid": "UFaBv",
-                    "id": 1,
                     "label": "Yes"
                 }
-            ]
+            ],
+            "uid": "qpNdi"
         },
         {
-            "uid": "DPfLQ",
-            "questionid": 5,
-            "type": "option",
             "title": "Do you have all tools to couple the necessary data types?",
+            "type": "option",
             "answers": [
                 {
                     "uid": "uxHre",
-                    "id": 0,
                     "label": "No"
                 },
                 {
                     "uid": "YCzvJ",
-                    "id": 1,
                     "label": "Yes"
                 }
-            ]
+            ],
+            "uid": "DPfLQ"
         }
-    ]
+    ],
+    "title": "Data integration",
+    "namespace": "core",
+    "formatversion": 1,
+    "chapterid": 5
 }

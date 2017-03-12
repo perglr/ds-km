@@ -1,64 +1,55 @@
 {
-    "chapterid": 6,
-    "namespace": "core",
-    "formatversion": 1,
-    "title": "Data interpretation",
     "questions": [
         {
-            "uid": "GDGRS",
-            "questionid": 1,
-            "type": "option",
             "title": "Will data interpretation and modeling require significant compute infrastructure capacity?",
+            "type": "option",
             "answers": [
                 {
                     "uid": "tNRGq",
-                    "id": 0,
                     "label": "Taken care of"
                 },
                 {
+                    "advice": "Make sure this has been taken into account in the capacity planning under 'Data design and planning'",
                     "uid": "TFuvV",
-                    "id": 1,
-                    "label": "Yes",
-                    "advice": "Make sure this has been taken into account in the capacity planning under 'Data design and planning'"
+                    "label": "Yes"
                 }
-            ]
+            ],
+            "uid": "GDGRS"
         },
         {
-            "uid": "fZGjS",
-            "questionid": 2,
             "type": "option",
-            "title": "How will you be making sure there is good provenance of the data analysis?",
-            "text": "Data analysis is normally done manually on a step-by-step basis. It is essential to make sure all steps are properly documented, otherwise results will not be reproducible.",
             "answers": [
                 {
                     "uid": "YAzAF",
-                    "id": 0,
                     "label": "Taken care of"
                 },
                 {
                     "uid": "Hxiai",
-                    "id": 1,
                     "label": "Drill deeper"
                 }
-            ]
+            ],
+            "text": "Data analysis is normally done manually on a step-by-step basis. It is essential to make sure all steps are properly documented, otherwise results will not be reproducible.",
+            "uid": "fZGjS",
+            "title": "How will you be making sure there is good provenance of the data analysis?"
         },
         {
-            "uid": "VTJPZ",
-            "questionid": 3,
-            "type": "option",
             "title": "Will you be doing (automated) knowledge discovery?",
+            "type": "option",
             "answers": [
                 {
                     "uid": "YibwY",
-                    "id": 0,
                     "label": "No"
                 },
                 {
                     "uid": "PrvMM",
-                    "id": 1,
                     "label": "Yes"
                 }
-            ]
+            ],
+            "uid": "VTJPZ"
         }
-    ]
+    ],
+    "title": "Data interpretation",
+    "namespace": "core",
+    "formatversion": 1,
+    "chapterid": 6
 }
