@@ -1,0 +1,20 @@
+{
+    "chapterid": 1,
+    "namespace": "allHands2017",
+    "formatversion": 1,
+    "questions":
+    [
+	{
+	    "questionid" : 666, "insertBefore": {"namespace": "core", "questionid": 1},
+	    "answers" : [
+		{ "id": 0,
+		  "label": "No",
+		  "advice": "Are you sure? Seems fishy..."},
+		{"id": 1,
+		  "label": "Yes",
+		  "advice": "Next time, again!"}],
+	    "title": "Have you enjoyed All Hands 2017?"
+	}
+    ]
+}
+
