@@ -13,7 +13,8 @@
 		{"id": 1,
 		  "label": "Yes",
 		  "advice": "Next time, again!"}],
-	    "title": "Have you enjoyed All Hands 2017?"
+	    "title": "Have you enjoyed All Hands 2017?",
+	    "type": "option"
 	}
     ]
 }
